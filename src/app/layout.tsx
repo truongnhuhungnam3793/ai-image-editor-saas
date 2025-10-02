@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import "@/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Architects_Daughter } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "AI Image Editor SaaS App",
@@ -11,16 +11,18 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-const geist = Geist({
+const architectsDaughter = Architects_Daughter({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  display: "swap",
+  variable: "--font-architects-daughter-sans",
 });
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
+    <html lang="en" className={`${architectsDaughter.variable}`}>
       <body>
         <Providers>{children}</Providers>
         <Toaster />
