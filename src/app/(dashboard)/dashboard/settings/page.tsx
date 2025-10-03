@@ -10,7 +10,7 @@ import { Loader2 } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const checkSession = async () => {
@@ -62,4 +62,4 @@ const page = () => {
     </>
   );
 };
-export default page;
+export default Page;
